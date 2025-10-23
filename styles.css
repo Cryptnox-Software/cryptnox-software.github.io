@@ -120,7 +120,7 @@
 
 /* Enhanced typography */
 .header h1 {
-    background: linear-gradient(45deg, #ffffff, #fcb770);
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
