@@ -1,0 +1,201 @@
+/* Additional styles for Cryptnox Software Documentation */
+
+/* Enhanced responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .header p {
+        font-size: 1.1rem;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        padding: 25px;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dark mode support - already dark by default */
+@media (prefers-color-scheme: light) {
+    body {
+        background: linear-gradient(180deg, #1a1a1a 20%, #fcb770 100%);
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .container {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .project-card {
+        break-inside: avoid;
+        border: 1px solid #ddd;
+        background: white;
+        color: black;
+    }
+    
+    .project-title {
+        color: black;
+    }
+    
+    .project-description {
+        color: #666;
+    }
+}
+
+/* Enhanced animations */
+.project-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.project-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.project-card:focus {
+    outline: 2px solid #8bc2f8;
+    outline-offset: 2px;
+}
+
+.project-link:focus {
+    outline: 2px solid #fcb770;
+    outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(73, 183, 67, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(73, 183, 67, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(73, 183, 67, 0);
+    }
+}
+
+/* Enhanced typography */
+.header h1 {
+    background: linear-gradient(45deg, #ffffff, #fcb770);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Glass morphism effect */
+.project-card {
+    background: rgba(24, 35, 46, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(252, 183, 112, 0.3);
+}
+
+/* Hover effects */
+.project-card:hover .project-link {
+    background: linear-gradient(180deg, #8bc2f8 0%, #fcb770 100%);
+    color: #101f2e;
+}
+
+/* Footer styles matching Random Access Card Generator */
+.footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px 0 30px 0;
+    margin-top: 70px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    flex-direction: column;
+}
+
+.footer-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+}
+
+.footer-flag img {
+    width: 30px;
+    height: auto;
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        padding: 16px 12px;
+    }
+    
+    .footer-address {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
