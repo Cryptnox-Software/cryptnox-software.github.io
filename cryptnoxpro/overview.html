@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptnoxpro Overview &mdash; cryptnoxpro 2.9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6dd198c1" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=bc52e0b9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/custom.js?v=f0d783cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="modules.html" />
+    <link rel="prev" title="Cryptnoxpro Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            cryptnoxpro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cryptnoxpro Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cryptnox-pro">Cryptnox Pro</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#license">License</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-and-requirements">Installation and requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows-microsoft-visual-c-14-x-build-tools">Windows Microsoft Visual C++ 14.x build tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux-additional-packages">Linux additional packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macos-additional-packages">MacOS additional packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macos-missing-certificates">MacOS missing certificates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-application">Running the application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#remote-mode">Remote mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exit-input">Exit input</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#development-environment">Development environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secrets">Secrets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pin-code">PIN code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#puk-code">PUK code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#easy-mode">Easy mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Interactive mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#seed-generation">Seed generation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#backup">Backup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dual-initialization">Dual Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recover">Recover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#restore">Restore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload">Upload</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cryptnoxpro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Cryptnoxpro Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cryptnoxpro-overview">
+<h1>Cryptnoxpro Overview<a class="headerlink" href="#cryptnoxpro-overview" title="Link to this heading"></a></h1>
+<section id="cryptnox-pro">
+<h2>Cryptnox Pro<a class="headerlink" href="#cryptnox-pro" title="Link to this heading"></a></h2>
+<a class="reference external image-reference" href="https://pypi.org/project/cryptnoxpro"><img alt="https://img.shields.io/pypi/v/cryptnoxpro" src="https://img.shields.io/pypi/v/cryptnoxpro" />
+</a>
+<p><strong>Warning: This is a beta release of the software.
+It is released for development purposes.
+Use at your own risk.</strong></p>
+<p>A command line user interface to manage and use of <a class="reference external" href="https://www.cryptnox.com/">Cryptnox Smart cards</a>.</p>
+<p>This provides basic wallets for <a class="reference external" href="https://bitcoin.org">Bitcoin</a> and
+<a class="reference external" href="https://ethereum.org">Ethereum</a>.</p>
+<p>It is able to execute <a class="reference external" href="https://eos.io/for-developers/build/cleos/">cleos</a> commands and use
+the keys on the card for signing.</p>
+<p>To buy NFC enabled cards that are supported by this application go to:
+<a class="reference external" href="https://www.cryptnox.com/">https://www.cryptnox.com/</a></p>
+<section id="license">
+<h3>License<a class="headerlink" href="#license" title="Link to this heading"></a></h3>
+<p>The library is available under dual licensing. You can use the library under the
+conditions of <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU GENERAL PUBLIC LICENSE 3.0+</a>
+or <a class="reference external" href="mailto:info&#37;&#52;&#48;cryptnox&#46;ch">contact us</a> to ask about commercial licensing.</p>
+</section>
+<section id="installation-and-requirements">
+<h3>Installation and requirements<a class="headerlink" href="#installation-and-requirements" title="Link to this heading"></a></h3>
+<p>The package can be installed using pip package manager with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>cryptnoxpro
+</pre></div>
+</div>
+<p>The application can also be installed from source as python package.
+In the root of the project, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+<p>This installs the application into your python packages and makes the
+<code class="docutils literal notranslate"><span class="pre">crytpnox</span></code> available as executable.</p>
+<p>If during python installation its path was added to system path the executable,
+e.g. command is available system wide.</p>
+<section id="windows-microsoft-visual-c-14-x-build-tools">
+<h4>Windows Microsoft Visual C++ 14.x build tools<a class="headerlink" href="#windows-microsoft-visual-c-14-x-build-tools" title="Link to this heading"></a></h4>
+<p>If you wish to install from pip package on windows, because of dependencies you will
+have to install Microsoft Visual C++ 14.x build tools that you can download from here:
+<a class="reference external" href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a></p>
+</section>
+<section id="linux-additional-packages">
+<h4>Linux additional packages<a class="headerlink" href="#linux-additional-packages" title="Link to this heading"></a></h4>
+<p>On some Debian/Ubuntu Linux systems there binaries for sme libraries are not
+delivered with the installed package. In this case install the following tools,
+so that they can be compiled during installation process.</p>
+<p>Ubuntu / Debian</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>autoconf<span class="w"> </span>libtool<span class="w"> </span>pkg-config<span class="w"> </span>python3-dev<span class="w"> </span>swig<span class="w"> </span>libpcsclite-dev
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>setuptools
+</pre></div>
+</div>
+<p>Fedora / CentOS / RHEL</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum<span class="w"> </span>install<span class="w"> </span>swig<span class="w"> </span>python3-pip<span class="w"> </span>python3-setuptools<span class="w"> </span>pcsc-lite-ccid
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>setuptools
+</pre></div>
+</div>
+</section>
+<section id="macos-additional-packages">
+<h4>MacOS additional packages<a class="headerlink" href="#macos-additional-packages" title="Link to this heading"></a></h4>
+<p>On MacOS to install CryptnoxPro with pip you need to add swig to the system as there are some
+dependencies written in C/C++</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>swig
+</pre></div>
+</div>
+</section>
+<section id="macos-missing-certificates">
+<h4>MacOS missing certificates<a class="headerlink" href="#macos-missing-certificates" title="Link to this heading"></a></h4>
+<p>If you’re using macOS and the command CLI is showing issues of missing certificates,
+open Macintosh HD &gt; Applications &gt; Python3.6 folder (or other version of python you’re using) &gt;
+double click on <strong>Install Certificates.command</strong> file.</p>
+</section>
+</section>
+<section id="running-the-application">
+<h3>Running the application<a class="headerlink" href="#running-the-application" title="Link to this heading"></a></h3>
+<p>The application can receive commands directly in any command line, or can be started in
+<a class="reference external" href="#interactive-mode">Interactive Mode</a> by starting without any arguments or options.
+The later will also start if the executable is called from a GUI, like Windows Explorer.</p>
+<section id="remote-mode">
+<h4>Remote mode<a class="headerlink" href="#remote-mode" title="Link to this heading"></a></h4>
+<p>While running the application without arguments starts a local mode, a port number can be provided
+as argument to start remote mode. This enables the application to connect to an interface on the
+same machine via the provided port.</p>
+<p>An example below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cryptnox<span class="w"> </span>--port<span class="w"> </span><span class="m">1234</span>
+</pre></div>
+</div>
+<p>Note: An interface to relay commands to remote reader should be developed in advance to accept this connection.</p>
+</section>
+<section id="exit-input">
+<h4>Exit input<a class="headerlink" href="#exit-input" title="Link to this heading"></a></h4>
+<p>Whenever an input is requested from the user: PIN or PUK code or any other information,
+the command execution can be exited with the keyword <code class="docutils literal notranslate"><span class="pre">exit</span></code>. When this is used the
+command stops the execution.</p>
+<p>To not overcrowd the interface this is not mentioned when information is requested by
+the CLI.</p>
+<p>Exiting the CLI closes existing card interface connections for remote mode.</p>
+</section>
+</section>
+<section id="development-environment">
+<h3>Development environment<a class="headerlink" href="#development-environment" title="Link to this heading"></a></h3>
+<p>For development purposes or for running separately from the system environment
+pipenv configuration files are provided.</p>
+<p>To set it up, use, from the root folder of the project:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipenv<span class="w"> </span>install
+</pre></div>
+</div>
+<p>or, if you want libraries for development purposes like pylint:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipenv<span class="w"> </span>install<span class="w"> </span>--dev
+</pre></div>
+</div>
+<p>To enter the new environment use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipenv<span class="w"> </span>shell
+</pre></div>
+</div>
+<p>This will open a new terminal inside the one it was called from. From here all
+packages will be available to run the application.</p>
+<p>From here the CLI is available as a script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>cryptnoxpro/main.py
+</pre></div>
+</div>
+<p>or as a module:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>cryptnoxpro.main
+</pre></div>
+</div>
+</section>
+<section id="secrets">
+<h3>Secrets<a class="headerlink" href="#secrets" title="Link to this heading"></a></h3>
+<p>Each card is protected by two secrets only known to the owner of the card.</p>
+<section id="pin-code">
+<h4>PIN code<a class="headerlink" href="#pin-code" title="Link to this heading"></a></h4>
+<p>The PIN code must be 4 to 9 number characters (‘0’-‘9’).
+After entering the wrong PIN code 3 times the card PIN code is
+locked, and it must be unlocked using the PUK code.</p>
+<p>Entering the correct PIN code resets the number of times the wrong PIN code
+can be entered.</p>
+</section>
+<section id="puk-code">
+<h4>PUK code<a class="headerlink" href="#puk-code" title="Link to this heading"></a></h4>
+<p>The PUK code must be 15 alphanumerical characters (‘a’-‘z’, ‘A’-‘Z’, ‘0’-‘9’).</p>
+</section>
+</section>
+<section id="easy-mode">
+<h3>Easy mode<a class="headerlink" href="#easy-mode" title="Link to this heading"></a></h3>
+<p><strong>Warning:</strong> Only use for testing purposes.</p>
+<p>The card can be initialized in easy mode. This is done for convenience of the
+user as you don’t have to enter the card secrets. For this reason it comes at
+the expense of security.</p>
+<p>The card is initialized with following infomation:</p>
+<ul class="simple">
+<li><p>Owner name: “EASY MODE”</p></li>
+<li><p>Owner email: “EASY MODE”</p></li>
+<li><p>PIN code 000000000</p></li>
+<li><p>PIK code 000000000000 (the length depends on te card type)</p></li>
+</ul>
+<p>When the application asks for any secret, PIN or PUK code, press “ENTER” key.
+The application will use the predefined information to fill it for you.</p>
+<p>Easy mode on card is determined from the owner name and email.</p>
+</section>
+<section id="id1">
+<h3>Interactive mode<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>An interactive mode is available if the command is entered without any arguments
+and options.</p>
+<p>In this mode the user will get a similar interface as a command line with its
+own prompt accepting same commands as regular call.</p>
+<p>When the mode starts it will show list of available cards.</p>
+<p>The prompt is also showing useful information:</p>
+<ul class="simple">
+<li><p><strong>cryptnoxpro</strong> indicates that the user is in interactive mode</p></li>
+<li><p>Serial number of the selected card on which the command will be executed</p></li>
+<li><p>Indication that the card is in easy mode</p></li>
+</ul>
+</section>
+<section id="seed-generation">
+<h3>Seed generation<a class="headerlink" href="#seed-generation" title="Link to this heading"></a></h3>
+<p>There are several ways to populate a card with a seed.</p>
+<p>Those that need entropy use the random number generator on the card.</p>
+<section id="backup">
+<h4>Backup<a class="headerlink" href="#backup" title="Link to this heading"></a></h4>
+<p>To use this way of creating a seed access to <a class="reference external" href="https://aws.amazon.com">AWS</a> is required.
+It is out of the scope of this documentation how to acquire <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>
+from the AWS as it’s a third party service and may change.</p>
+<p>After getting the entropy from the card the user is asked for AWS access keys, two regions and a
+name for the backup. Two regions are used for using KMS and Secrets Manager services on two
+separate machines to increase the security of the saved entropy. Name of the backup is used to
+identify which entropy will be restored with the Restore command.</p>
+<p>The backed up information is retrieved for comparison with the original to make sure the saving
+process was successful and next time when the data is retrieved is the same as the entropy that is
+us for seed generation for the card. After this the seed is uploaded to the card.</p>
+<p>After the operation a summary will be shown and saved to a file with the name of the regions and
+name of the backup.</p>
+<p>This is safe way to store the entropy as the information for recreating is saved in the cloud in
+two separate regions chosen by the user. It is also simpler then requesting from the user to secure
+the mnemonic.</p>
+</section>
+<section id="dual-initialization">
+<h4>Dual Initialization<a class="headerlink" href="#dual-initialization" title="Link to this heading"></a></h4>
+<p>For this process two Cryptnox Cards are required. The seed is generated in both cards in a secure
+way. You will need to start the command with the first card for the host to get information from it.
+After that the user is asked to remove the card and insert the second card into the same reader.
+The information from the first card will be injected into the second card and a seed is generated
+in the second card at this point. The process is not finished. Information will be requested
+from second card and the user needs to remove the second card and insert the first card into
+the same reader. The information from the second card will be injected into the first card. At
+this time the first card will use the information to generate the same seed the second card has
+already generated. When the process has finished the two card will have the same seed in them
+and have access to the same accounts.</p>
+<p>This is the most secure way to generate a seed while still having a backup. The seed newer leaves
+the card. The common information is used for it’s generation, but the information that was received
+from the card in the process is not enough to generate the seed.</p>
+</section>
+<section id="recover">
+<h4>Recover<a class="headerlink" href="#recover" title="Link to this heading"></a></h4>
+<p>Create seed from the mnemonic, <a class="reference external" href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP39</a>,
+entered by the user and upload it onto the card. This mnemonic could be acquired by using the
+command Upload.</p>
+</section>
+<section id="restore">
+<h4>Restore<a class="headerlink" href="#restore" title="Link to this heading"></a></h4>
+<p>To use this way of creating a seed access to <a class="reference external" href="https://aws.amazon.com">AWS</a> is required.
+It is out of the scope of this documentation how to acquire <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>
+from the AWS as it’s a third party service and may change.</p>
+<p>If a Backup operation has been finished this command allows for retrieval of the entropy and it’s
+usage in populating a card with a seed. The user will be asked for AWS access keys, two regions
+and the name of the backup to be retrieved. The host tries to acquire the backup from the two given
+regions under the given name. The retrieved information is used to generate a seed that is uploaded
+to the card.</p>
+</section>
+<section id="upload">
+<h4>Upload<a class="headerlink" href="#upload" title="Link to this heading"></a></h4>
+<p>Get the entropy from the card. Generate mnemonic
+<a class="reference external" href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP39</a> and seed on the host.
+Upload the seed to the card. Show the mnemonic to the user for saving it, on a paper or electronic
+form for later recovery.</p>
+<p>With the mnemonic the seed can be generated by anyone and access to funds connected to accounts
+gained. It is the responsibility of the user to keep the mnemonic safe and secure.</p>
+<p>If the mnemonic is lost there is no way to recover the account and funds connected to it.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Cryptnoxpro Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Cryptnox.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

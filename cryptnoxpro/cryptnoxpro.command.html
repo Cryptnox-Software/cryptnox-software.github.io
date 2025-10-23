@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cryptnoxpro.command package &mdash; cryptnoxpro 2.9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6dd198c1" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=bc52e0b9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/custom.js?v=f0d783cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="cryptnoxpro.command.card package" href="cryptnoxpro.command.card.html" />
+    <link rel="prev" title="cryptnoxpro package" href="cryptnoxpro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            cryptnoxpro
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Cryptnoxpro Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="cryptnoxpro.html">cryptnoxpro package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="cryptnoxpro.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">cryptnoxpro.command package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.lib.html">cryptnoxpro.lib package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.wallet.html">cryptnoxpro.wallet package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.html#cryptnoxpro-config-module">cryptnoxpro.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.html#module-cryptnoxpro.enums">cryptnoxpro.enums module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.html#cryptnoxpro-interactive-cli-module">cryptnoxpro.interactive_cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.html#cryptnoxpro-main-module">cryptnoxpro.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.html#module-cryptnoxpro">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cryptnoxpro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="cryptnoxpro.html">cryptnoxpro package</a></li>
+      <li class="breadcrumb-item active">cryptnoxpro.command package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cryptnoxpro.command.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cryptnoxpro-command-package">
+<h1>cryptnoxpro.command package<a class="headerlink" href="#cryptnoxpro-command-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cryptnoxpro.command.card.html">cryptnoxpro.command.card package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.card.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.card.html#cryptnoxpro-command-card-info-module">cryptnoxpro.command.card.info module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.card.html#cryptnoxpro-command-card-initialize-module">cryptnoxpro.command.card.initialize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.card.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptnoxpro.command.erc_token.html">cryptnoxpro.command.erc_token package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.erc_token.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.erc_token.html#cryptnoxpro-command-erc-token-contract-module">cryptnoxpro.command.erc_token.contract module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.erc_token.html#cryptnoxpro-command-erc-token-info-module">cryptnoxpro.command.erc_token.info module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.erc_token.html#cryptnoxpro-command-erc-token-initialize-module">cryptnoxpro.command.erc_token.initialize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.erc_token.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptnoxpro.command.helper.html">cryptnoxpro.command.helper package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#module-cryptnoxpro.command.helper.backup">cryptnoxpro.command.helper.backup module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.AWS"><code class="docutils literal notranslate"><span class="pre">AWS</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.AWS.aliases"><code class="docutils literal notranslate"><span class="pre">AWS.aliases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.AWS.backup"><code class="docutils literal notranslate"><span class="pre">AWS.backup()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.AWS.delete_access_key"><code class="docutils literal notranslate"><span class="pre">AWS.delete_access_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.AWS.region"><code class="docutils literal notranslate"><span class="pre">AWS.region</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.AWS.regions"><code class="docutils literal notranslate"><span class="pre">AWS.regions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.AWS.retrieve"><code class="docutils literal notranslate"><span class="pre">AWS.retrieve()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.BackupException"><code class="docutils literal notranslate"><span class="pre">BackupException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.ConnectionException"><code class="docutils literal notranslate"><span class="pre">ConnectionException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.ExistsException"><code class="docutils literal notranslate"><span class="pre">ExistsException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.backup.NotFoundException"><code class="docutils literal notranslate"><span class="pre">NotFoundException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro-command-helper-cards-module">cryptnoxpro.command.helper.cards module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro-command-helper-config-module">cryptnoxpro.command.helper.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#module-cryptnoxpro.command.helper.download_folder">cryptnoxpro.command.helper.download_folder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.download_folder.get_download_folder"><code class="docutils literal notranslate"><span class="pre">get_download_folder()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro-command-helper-helper-methods-module">cryptnoxpro.command.helper.helper_methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro-command-helper-notification-module">cryptnoxpro.command.helper.notification module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro-command-helper-security-module">cryptnoxpro.command.helper.security module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#module-cryptnoxpro.command.helper.seed_backup">cryptnoxpro.command.helper.seed_backup module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.seed_backup.create_data_key"><code class="docutils literal notranslate"><span class="pre">create_data_key()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.seed_backup.create_secret"><code class="docutils literal notranslate"><span class="pre">create_secret()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.seed_backup.decrypt_data"><code class="docutils literal notranslate"><span class="pre">decrypt_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.seed_backup.decrypt_data_key"><code class="docutils literal notranslate"><span class="pre">decrypt_data_key()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.seed_backup.encrypt_data"><code class="docutils literal notranslate"><span class="pre">encrypt_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.seed_backup.get_secret"><code class="docutils literal notranslate"><span class="pre">get_secret()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#module-cryptnoxpro.command.helper.ui">cryptnoxpro.command.helper.ui module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.ExitException"><code class="docutils literal notranslate"><span class="pre">ExitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.InitData"><code class="docutils literal notranslate"><span class="pre">InitData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.InitData.email"><code class="docutils literal notranslate"><span class="pre">InitData.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.InitData.name"><code class="docutils literal notranslate"><span class="pre">InitData.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.InitData.pin"><code class="docutils literal notranslate"><span class="pre">InitData.pin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.InitData.puk"><code class="docutils literal notranslate"><span class="pre">InitData.puk</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.StringConvert"><code class="docutils literal notranslate"><span class="pre">StringConvert</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.StringConvert.isascii_"><code class="docutils literal notranslate"><span class="pre">StringConvert.isascii_()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.confirm"><code class="docutils literal notranslate"><span class="pre">confirm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.get_init_data"><code class="docutils literal notranslate"><span class="pre">get_init_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.input_type"><code class="docutils literal notranslate"><span class="pre">input_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.input_with_exit"><code class="docutils literal notranslate"><span class="pre">input_with_exit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.option_input"><code class="docutils literal notranslate"><span class="pre">option_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.print_warning"><code class="docutils literal notranslate"><span class="pre">print_warning()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.helper.html#cryptnoxpro.command.helper.ui.secret_with_exit"><code class="docutils literal notranslate"><span class="pre">secret_with_exit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.helper.html#module-cryptnoxpro.command.helper">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptnoxpro.command.options.html">cryptnoxpro.command.options package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.options.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.options.html#module-cryptnoxpro.command.options.common">cryptnoxpro.command.options.common module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.options.html#cryptnoxpro.command.options.common.add_config_sub_parser"><code class="docutils literal notranslate"><span class="pre">add_config_sub_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.options.html#cryptnoxpro.command.options.common.add_pin_option"><code class="docutils literal notranslate"><span class="pre">add_pin_option()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.options.html#cryptnoxpro.command.options.common.pin_validator"><code class="docutils literal notranslate"><span class="pre">pin_validator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.options.html#cryptnoxpro-command-options-eth-module">cryptnoxpro.command.options.eth module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.options.html#cryptnoxpro-command-options-options-module">cryptnoxpro.command.options.options module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.options.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptnoxpro.command.user_keys.html">cryptnoxpro.command.user_keys package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.aws_kms.html">cryptnoxpro.command.user_keys.aws_kms package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.aws_kms.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.aws_kms.html#module-cryptnoxpro.command.user_keys.aws_kms.aws_kms">cryptnoxpro.command.user_keys.aws_kms.aws_kms module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.aws_kms.html#module-cryptnoxpro.command.user_keys.aws_kms">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.hello.html">cryptnoxpro.command.user_keys.hello package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.hello.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.hello.html#module-cryptnoxpro.command.user_keys.hello.exceptions">cryptnoxpro.command.user_keys.hello.exceptions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.hello.html#cryptnoxpro-command-user-keys-hello-hello-module">cryptnoxpro.command.user_keys.hello.hello module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.hello.html#module-cryptnoxpro.command.user_keys.hello.windows_hello">cryptnoxpro.command.user_keys.hello.windows_hello module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.hello.html#module-cryptnoxpro.command.user_keys.hello">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.piv.html">cryptnoxpro.command.user_keys.piv package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.piv.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.piv.html#cryptnoxpro-command-user-keys-piv-piv-module">cryptnoxpro.command.user_keys.piv.piv module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.piv.html#cryptnoxpro-command-user-keys-piv-piv-card-module">cryptnoxpro.command.user_keys.piv.piv_card module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.piv.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro-command-user-keys-authentication-module">cryptnoxpro.command.user_keys.authentication module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#module-cryptnoxpro.command.user_keys.user_key_base">cryptnoxpro.command.user_keys.user_key_base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.ExitException"><code class="docutils literal notranslate"><span class="pre">ExitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.NotFoundException"><code class="docutils literal notranslate"><span class="pre">NotFoundException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.NotSupportedException"><code class="docutils literal notranslate"><span class="pre">NotSupportedException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.ProcessingException"><code class="docutils literal notranslate"><span class="pre">ProcessingException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey"><code class="docutils literal notranslate"><span class="pre">UserKey</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.added"><code class="docutils literal notranslate"><span class="pre">UserKey.added()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.custom_bit"><code class="docutils literal notranslate"><span class="pre">UserKey.custom_bit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.delete"><code class="docutils literal notranslate"><span class="pre">UserKey.delete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.description"><code class="docutils literal notranslate"><span class="pre">UserKey.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.enabled"><code class="docutils literal notranslate"><span class="pre">UserKey.enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.name"><code class="docutils literal notranslate"><span class="pre">UserKey.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.priority"><code class="docutils literal notranslate"><span class="pre">UserKey.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.public_key"><code class="docutils literal notranslate"><span class="pre">UserKey.public_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.sign"><code class="docutils literal notranslate"><span class="pre">UserKey.sign()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKey.slot_index"><code class="docutils literal notranslate"><span class="pre">UserKey.slot_index</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#cryptnoxpro.command.user_keys.user_key_base.UserKeyException"><code class="docutils literal notranslate"><span class="pre">UserKeyException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cryptnoxpro.command.user_keys.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-btc-module">
+<h2>cryptnoxpro.command.btc module<a class="headerlink" href="#cryptnoxpro-command-btc-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-card-configuration-module">
+<h2>cryptnoxpro.command.card_configuration module<a class="headerlink" href="#cryptnoxpro-command-card-configuration-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-cards-module">
+<h2>cryptnoxpro.command.cards module<a class="headerlink" href="#cryptnoxpro-command-cards-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-change-pin-module">
+<h2>cryptnoxpro.command.change_pin module<a class="headerlink" href="#cryptnoxpro-command-change-pin-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-change-puk-module">
+<h2>cryptnoxpro.command.change_puk module<a class="headerlink" href="#cryptnoxpro-command-change-puk-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-command-module">
+<h2>cryptnoxpro.command.command module<a class="headerlink" href="#cryptnoxpro-command-command-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-config-module">
+<h2>cryptnoxpro.command.config module<a class="headerlink" href="#cryptnoxpro-command-config-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-decrypt-module">
+<h2>cryptnoxpro.command.decrypt module<a class="headerlink" href="#cryptnoxpro-command-decrypt-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-eth-module">
+<h2>cryptnoxpro.command.eth module<a class="headerlink" href="#cryptnoxpro-command-eth-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-factory-module">
+<h2>cryptnoxpro.command.factory module<a class="headerlink" href="#cryptnoxpro-command-factory-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-get-clearpubkey-module">
+<h2>cryptnoxpro.command.get_clearpubkey module<a class="headerlink" href="#cryptnoxpro-command-get-clearpubkey-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-get-xpub-module">
+<h2>cryptnoxpro.command.get_xpub module<a class="headerlink" href="#cryptnoxpro-command-get-xpub-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-history-module">
+<h2>cryptnoxpro.command.history module<a class="headerlink" href="#cryptnoxpro-command-history-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-info-module">
+<h2>cryptnoxpro.command.info module<a class="headerlink" href="#cryptnoxpro-command-info-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-initialize-module">
+<h2>cryptnoxpro.command.initialize module<a class="headerlink" href="#cryptnoxpro-command-initialize-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-reset-module">
+<h2>cryptnoxpro.command.reset module<a class="headerlink" href="#cryptnoxpro-command-reset-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-seed-module">
+<h2>cryptnoxpro.command.seed module<a class="headerlink" href="#cryptnoxpro-command-seed-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-server-module">
+<h2>cryptnoxpro.command.server module<a class="headerlink" href="#cryptnoxpro-command-server-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-transfer-module">
+<h2>cryptnoxpro.command.transfer module<a class="headerlink" href="#cryptnoxpro-command-transfer-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-unknown-module">
+<h2>cryptnoxpro.command.unknown module<a class="headerlink" href="#cryptnoxpro-command-unknown-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-unlock-pin-module">
+<h2>cryptnoxpro.command.unlock_pin module<a class="headerlink" href="#cryptnoxpro-command-unlock-pin-module" title="Link to this heading"></a></h2>
+</section>
+<section id="cryptnoxpro-command-user-key-module">
+<h2>cryptnoxpro.command.user_key module<a class="headerlink" href="#cryptnoxpro-command-user-key-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cryptnoxpro.command">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cryptnoxpro.command" title="Link to this heading"></a></h2>
+<p>Module to work with commands given by the user in a command line</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cryptnoxpro.html" class="btn btn-neutral float-left" title="cryptnoxpro package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cryptnoxpro.command.card.html" class="btn btn-neutral float-right" title="cryptnoxpro.command.card package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Cryptnox.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
