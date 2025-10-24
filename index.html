@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <meta name="theme-color" content="#000000">
     <title>Cryptnox Software Documentation</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        :root {
+            color-scheme: light only;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,12 +20,13 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(180deg, #000000 20%, #fcb770 100%);
+            background: linear-gradient(180deg, #000000 20%, #fcb770 100%) !important;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            color: white !important;
         }
 
         .container {
@@ -33,7 +40,7 @@
         }
 
         .header {
-            color: white;
+            color: white !important;
             text-align: center;
             margin-bottom: 60px;
         }
@@ -43,11 +50,12 @@
             margin-bottom: 20px;
             font-weight: 500;
             text-align: center;
+            color: white !important;
         }
 
         .header p {
             max-width: 720px;
-            color: #fcb770;
+            color: #fcb770 !important;
             font-size: 1.3rem;
             opacity: 0.9;
             text-align: center;
@@ -63,19 +71,21 @@
         }
 
         .project-card {
-            background: #18232e;
+            background: #18232e !important;
             border-radius: 21px;
             padding: 30px;
             text-decoration: none;
-            color: inherit;
+            color: white !important;
             transition: all 0.3s ease;
-            border: 2px solid #fcb770;
+            border: 2px solid #fcb770 !important;
             backdrop-filter: blur(10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            min-height: 300px;
+            justify-content: space-between;
         }
 
         .project-card:hover {
@@ -87,7 +97,7 @@
         .project-title {
             font-size: 1.8rem;
             font-weight: 600;
-            color: white;
+            color: white !important;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
@@ -95,11 +105,12 @@
         }
 
         .project-description {
-            color: #fcb770;
+            color: #fcb770 !important;
             margin-bottom: 20px;
             font-size: 1rem;
             line-height: 1.5;
             opacity: 0.9;
+            flex-grow: 1;
         }
 
         .project-link {
@@ -114,6 +125,8 @@
             border: 2px solid #fcb770;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-top: auto;
+            align-self: center;
         }
 
         .project-link:hover {
