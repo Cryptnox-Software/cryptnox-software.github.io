@@ -146,6 +146,8 @@
     <span class="n">electrum_xprv_headers</span> <span class="o">=</span> <span class="n">xprv_headers</span>
     <span class="n">electrum_xpub_headers</span> <span class="o">=</span> <span class="n">xpub_headers</span>
 
+<div class="viewcode-block" id="BaseCoin.__init__">
+<a class="viewcode-back" href="../../../../../cryptnoxpro.lib.cryptos.coins.html#cryptnoxpro.lib.cryptos.coins.base.BaseCoin.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">testnet</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">testnet</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">is_testnet</span> <span class="o">=</span> <span class="kc">True</span>
@@ -166,7 +168,8 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">script_prefixes</span> <span class="o">=</span> <span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">secondary_hashcode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">secondary_hashcode</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">hashcode</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_rpc_client</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rpc_client</span> <span class="o">=</span> <span class="kc">None</span></div>
+
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">rpc_client</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

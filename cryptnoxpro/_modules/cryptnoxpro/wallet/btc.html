@@ -116,6 +116,8 @@
 <span class="sd">    BlockCypherApi</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+<div class="viewcode-block" id="BlockCypherApi.__init__">
+<a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.btc.BlockCypherApi.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">network</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="n">api_key</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.blockcypher.com/v1/btc/main/&quot;</span>
@@ -123,7 +125,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.blockcypher.com/v1/btc/test3/&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;token&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apikey</span><span class="p">}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">js_res</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">web_rsc</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">web_rsc</span> <span class="o">=</span> <span class="kc">None</span></div>
+
 
 <div class="viewcode-block" id="BlockCypherApi.get_data">
 <a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.btc.BlockCypherApi.get_data">[docs]</a>
@@ -237,11 +240,14 @@
 <span class="sd">    BlkHubApi</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+<div class="viewcode-block" id="BlkHubApi.__init__">
+<a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.btc.BlkHubApi.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">network</span><span class="p">):</span>
         <span class="n">network</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">BlkHubApi</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">js_res</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">web_rsc</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">web_rsc</span> <span class="o">=</span> <span class="kc">None</span></div>
+
 
 <div class="viewcode-block" id="BlkHubApi.get_api">
 <a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.btc.BlkHubApi.get_api">[docs]</a>
@@ -404,6 +410,8 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;m/44&#39;/0&#39;/0&#39;/0/0&quot;</span>
 
+<div class="viewcode-block" id="BTCwallet.__init__">
+<a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.btc.BTCwallet.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pubkey</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coin_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">api</span><span class="p">,</span>
                  <span class="n">card</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -427,7 +435,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">var_tx</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">len_inputs</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data_hash</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fee</span> <span class="o">=</span> <span class="mi">2000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fee</span> <span class="o">=</span> <span class="mi">2000</span></div>
+
 
 <div class="viewcode-block" id="BTCwallet.get_utx_os">
 <a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.btc.BTCwallet.get_utx_os">[docs]</a>
@@ -579,11 +588,14 @@
     <span class="n">fees</span> <span class="o">=</span> <span class="n">IntValidator</span><span class="p">()</span>
     <span class="n">derivation</span> <span class="o">=</span> <span class="n">EnumValidator</span><span class="p">(</span><span class="n">Derivation</span><span class="p">)</span>
 
+<div class="viewcode-block" id="BtcValidator.__init__">
+<a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.btc.BtcValidator.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">network</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;testnet&quot;</span><span class="p">,</span> <span class="n">fees</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span>
                  <span class="n">derivation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;DERIVE&quot;</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">network</span> <span class="o">=</span> <span class="n">network</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fees</span> <span class="o">=</span> <span class="n">fees</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">derivation</span> <span class="o">=</span> <span class="n">derivation</span></div>
+</div>
 
 </pre></div>
 
