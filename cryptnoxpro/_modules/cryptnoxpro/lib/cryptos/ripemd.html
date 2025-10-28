@@ -137,14 +137,11 @@
 <span class="sd">    may be provided; if present, this string will be automatically</span>
 <span class="sd">    hashed.&quot;&quot;&quot;</span>
     
-<div class="viewcode-block" id="RIPEMD160.__init__">
-<a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.ripemd.RIPEMD160.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ctx</span> <span class="o">=</span> <span class="n">RMDContext</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">arg</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dig</span> <span class="o">=</span> <span class="kc">None</span></div>
-
+        <span class="bp">self</span><span class="o">.</span><span class="n">dig</span> <span class="o">=</span> <span class="kc">None</span>
         
 <div class="viewcode-block" id="RIPEMD160.update">
 <a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.ripemd.RIPEMD160.update">[docs]</a>
@@ -209,14 +206,11 @@
 <div class="viewcode-block" id="RMDContext">
 <a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.ripemd.RMDContext">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">RMDContext</span><span class="p">:</span>
-<div class="viewcode-block" id="RMDContext.__init__">
-<a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.ripemd.RMDContext.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x67452301</span><span class="p">,</span> <span class="mh">0xEFCDAB89</span><span class="p">,</span> <span class="mh">0x98BADCFE</span><span class="p">,</span>
                       <span class="mh">0x10325476</span><span class="p">,</span> <span class="mh">0xC3D2E1F0</span><span class="p">]</span> <span class="c1"># uint32</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># uint64</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">64</span> <span class="c1"># uchar</span></div>
-
+        <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">64</span> <span class="c1"># uchar</span>
 <div class="viewcode-block" id="RMDContext.copy">
 <a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.ripemd.RMDContext.copy">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

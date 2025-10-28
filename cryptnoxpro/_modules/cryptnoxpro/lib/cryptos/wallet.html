@@ -89,8 +89,6 @@
 <a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.wallet.HDWallet">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">HDWallet</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-<div class="viewcode-block" id="HDWallet.__init__">
-<a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.wallet.HDWallet.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keystore</span><span class="p">,</span> <span class="n">num_addresses</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">last_receiving_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">last_change_index</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">coin</span> <span class="o">=</span> <span class="n">keystore</span><span class="o">.</span><span class="n">coin</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">keystore</span> <span class="o">=</span> <span class="n">keystore</span>
@@ -103,8 +101,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">keystore</span><span class="o">.</span><span class="n">electrum</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">script_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">keystore</span><span class="o">.</span><span class="n">xtype</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">script_type</span> <span class="o">=</span> <span class="s2">&quot;p2pkh&quot;</span></div>
-
+            <span class="bp">self</span><span class="o">.</span><span class="n">script_type</span> <span class="o">=</span> <span class="s2">&quot;p2pkh&quot;</span>
 
 <div class="viewcode-block" id="HDWallet.privkey">
 <a class="viewcode-back" href="../../../../cryptnoxpro.lib.cryptos.html#cryptnoxpro.lib.cryptos.wallet.HDWallet.privkey">[docs]</a>

@@ -98,12 +98,9 @@
 <span class="sd">    Validator class defining setters and getters</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="Validator.__init__">
-<a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.validators.Validator.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valid_values</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valid_values</span> <span class="o">=</span> <span class="n">valid_values</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span></div>
-
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__set_name__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -147,13 +144,10 @@
 <span class="sd">       Class for validating if value is integer</span>
 <span class="sd">       &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="IntValidator.__init__">
-<a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.validators.IntValidator.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_value</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">min_value</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_value</span> <span class="o">=</span> <span class="n">max_value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">min_value</span> <span class="o">=</span> <span class="n">min_value</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span></div>
-
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
 
 <div class="viewcode-block" id="IntValidator.validate">
 <a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.validators.IntValidator.validate">[docs]</a>
@@ -177,12 +171,9 @@
 <span class="sd">    Class for validating if value is part of the enum</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="EnumValidator.__init__">
-<a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.validators.EnumValidator.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_enum</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">current_enum</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current_enum</span> <span class="o">=</span> <span class="n">current_enum</span></div>
-
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_enum</span> <span class="o">=</span> <span class="n">current_enum</span>
 
 <div class="viewcode-block" id="EnumValidator.validate">
 <a class="viewcode-back" href="../../../cryptnoxpro.wallet.html#cryptnoxpro.wallet.validators.EnumValidator.validate">[docs]</a>
