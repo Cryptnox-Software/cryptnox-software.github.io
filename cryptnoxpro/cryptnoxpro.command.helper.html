@@ -47,7 +47,6 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Cryptnoxpro Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="cryptnoxpro.html">cryptnoxpro package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="cryptnoxpro.html#subpackages">Subpackages</a><ul class="current">
@@ -101,113 +100,8 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="module-cryptnoxpro.command.helper.backup">
-<span id="cryptnoxpro-command-helper-backup-module"></span><h2>cryptnoxpro.command.helper.backup module<a class="headerlink" href="#module-cryptnoxpro.command.helper.backup" title="Link to this heading"></a></h2>
-<p>Module for handling backup of seed into the cloud</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.AWS">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.backup.</span></span><span class="sig-name descname"><span class="pre">AWS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">access_key_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret_access_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#AWS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.AWS" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class for handling backup to AWS cloud using KMS and Secrets manager services</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>access_key_id</strong> (<em>str</em>) – Access key id for AWS service</p></li>
-<li><p><strong>secret_access_key</strong> (<em>str</em>) – Secret access key for AWS service</p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#cryptnoxpro.command.helper.backup.ConnectionException" title="cryptnoxpro.command.helper.backup.ConnectionException"><strong>ConnectionException</strong></a> – There is an issue with credentials</p>
-</dd>
-</dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.AWS.aliases">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cryptnoxpro.command.helper.backup.AWS.aliases" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.AWS.backup">
-<span class="sig-name descname"><span class="pre">backup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#AWS.backup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.AWS.backup" title="Link to this definition"></a></dt>
-<dd><p>Backup data under name</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – Name of the backup</p></li>
-<li><p><strong>data</strong> (<em>bytes</em>) – Data to be backed up</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.AWS.delete_access_key">
-<span class="sig-name descname"><span class="pre">delete_access_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#AWS.delete_access_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.AWS.delete_access_key" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.AWS.region">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#cryptnoxpro.command.helper.backup.AWS.region" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.AWS.regions">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">regions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cryptnoxpro.command.helper.backup.AWS.regions" title="Link to this definition"></a></dt>
-<dd><p>Return a list of services with regions they are available in
-:rtype: Dict[str, List[str]]</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>return</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.AWS.retrieve">
-<span class="sig-name descname"><span class="pre">retrieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#AWS.retrieve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.AWS.retrieve" title="Link to this definition"></a></dt>
-<dd><p>Retrieve a backup from AWS services</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the backup to retrieve</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The retrieved backup</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bytes</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.BackupException">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.backup.</span></span><span class="sig-name descname"><span class="pre">BackupException</span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#BackupException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.BackupException" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Base exception for all seed backup exceptions</p>
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.ConnectionException">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.backup.</span></span><span class="sig-name descname"><span class="pre">ConnectionException</span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#ConnectionException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.ConnectionException" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#cryptnoxpro.command.helper.backup.BackupException" title="cryptnoxpro.command.helper.backup.BackupException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BackupException</span></code></a></p>
-<p>Issue connecting to the service</p>
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.ExistsException">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.backup.</span></span><span class="sig-name descname"><span class="pre">ExistsException</span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#ExistsException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.ExistsException" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#cryptnoxpro.command.helper.backup.BackupException" title="cryptnoxpro.command.helper.backup.BackupException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BackupException</span></code></a></p>
-<p>The backup with given name already exist when creating a new one</p>
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.backup.NotFoundException">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.backup.</span></span><span class="sig-name descname"><span class="pre">NotFoundException</span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/backup.html#NotFoundException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.backup.NotFoundException" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#cryptnoxpro.command.helper.backup.BackupException" title="cryptnoxpro.command.helper.backup.BackupException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BackupException</span></code></a></p>
-<p>When retrieving a backup it doesn’t exist</p>
-</dd></dl>
-
+<section id="cryptnoxpro-command-helper-backup-module">
+<h2>cryptnoxpro.command.helper.backup module<a class="headerlink" href="#cryptnoxpro-command-helper-backup-module" title="Link to this heading"></a></h2>
 </section>
 <section id="cryptnoxpro-command-helper-cards-module">
 <h2>cryptnoxpro.command.helper.cards module<a class="headerlink" href="#cryptnoxpro-command-helper-cards-module" title="Link to this heading"></a></h2>
@@ -236,178 +130,17 @@ and backup storage.</p>
 <section id="cryptnoxpro-command-helper-security-module">
 <h2>cryptnoxpro.command.helper.security module<a class="headerlink" href="#cryptnoxpro-command-helper-security-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-cryptnoxpro.command.helper.seed_backup">
-<span id="cryptnoxpro-command-helper-seed-backup-module"></span><h2>cryptnoxpro.command.helper.seed_backup module<a class="headerlink" href="#module-cryptnoxpro.command.helper.seed_backup" title="Link to this heading"></a></h2>
-<p>Module for secure seed backup and recovery functionality using
-AWS KMS and Secrets Manager services. It handles encryption, storage,
-and retrieval of sensitive seed data with proper key management.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.seed_backup.create_data_key">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.seed_backup.</span></span><span class="sig-name descname"><span class="pre">create_data_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmk_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_spec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AES_256'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/seed_backup.html#create_data_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.seed_backup.create_data_key" title="Link to this definition"></a></dt>
-<dd><p>Generate a data key to use when encrypting and decrypting data</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>cmk_id</strong> – KMS CMK ID or ARN under which to generate and encrypt the
-data key.</p></li>
-<li><p><strong>key_spec</strong> – Length of the data encryption key. Supported values:
-‘AES_128’: Generate a 128-bit symmetric key
-‘AES_256’: Generate a 256-bit symmetric key</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Tuple(EncryptedDataKey, PlaintextDataKey) where:
-EncryptedDataKey: Encrypted CiphertextBlob data key as binary string
-PlaintextDataKey: Plaintext base64-encoded data key as binary string</p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tuple(None, None) if error</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.seed_backup.create_secret">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.seed_backup.</span></span><span class="sig-name descname"><span class="pre">create_secret</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/seed_backup.html#create_secret"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.seed_backup.create_secret" title="Link to this definition"></a></dt>
-<dd><p>Creates a new secret. The secret value can only be bytes here.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – The name of the secret to create.</p></li>
-<li><p><strong>secret_value</strong> – The value of the secret.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Metadata about the newly created secret.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.seed_backup.decrypt_data">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.seed_backup.</span></span><span class="sig-name descname"><span class="pre">decrypt_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/seed_backup.html#decrypt_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.seed_backup.decrypt_data" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.seed_backup.decrypt_data_key">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.seed_backup.</span></span><span class="sig-name descname"><span class="pre">decrypt_data_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_key_encrypted</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/seed_backup.html#decrypt_data_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.seed_backup.decrypt_data_key" title="Link to this definition"></a></dt>
-<dd><p>Decrypt an encrypted data key</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.seed_backup.encrypt_data">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.seed_backup.</span></span><span class="sig-name descname"><span class="pre">encrypt_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/seed_backup.html#encrypt_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.seed_backup.encrypt_data" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.seed_backup.get_secret">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.seed_backup.</span></span><span class="sig-name descname"><span class="pre">get_secret</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_secret_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/seed_backup.html#get_secret"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.seed_backup.get_secret" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
+<section id="cryptnoxpro-command-helper-seed-backup-module">
+<h2>cryptnoxpro.command.helper.seed_backup module<a class="headerlink" href="#cryptnoxpro-command-helper-seed-backup-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-cryptnoxpro.command.helper.ui">
-<span id="cryptnoxpro-command-helper-ui-module"></span><h2>cryptnoxpro.command.helper.ui module<a class="headerlink" href="#module-cryptnoxpro.command.helper.ui" title="Link to this heading"></a></h2>
-<p>Module providing user interface components including input validation,
-confirmation dialogs, data collection forms, and display formatting
-for the command-line interface.</p>
-<dl class="py exception">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.ExitException">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">ExitException</span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#ExitException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.ExitException" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Raised when user has indicated he want’s to exit the command</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.InitData">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">InitData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">puk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cryptnoxpro.command.helper.ui.InitData" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.InitData.email">
-<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#cryptnoxpro.command.helper.ui.InitData.email" title="Link to this definition"></a></dt>
-<dd><p>Alias for field number 1</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.InitData.name">
-<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#cryptnoxpro.command.helper.ui.InitData.name" title="Link to this definition"></a></dt>
-<dd><p>Alias for field number 0</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.InitData.pin">
-<span class="sig-name descname"><span class="pre">pin</span></span><a class="headerlink" href="#cryptnoxpro.command.helper.ui.InitData.pin" title="Link to this definition"></a></dt>
-<dd><p>Alias for field number 2</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.InitData.puk">
-<span class="sig-name descname"><span class="pre">puk</span></span><a class="headerlink" href="#cryptnoxpro.command.helper.ui.InitData.puk" title="Link to this definition"></a></dt>
-<dd><p>Alias for field number 3</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.StringConvert">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">StringConvert</span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#StringConvert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.StringConvert" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-<p>Class for finding if string can be converted to ascii.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.StringConvert.isascii_">
-<span class="sig-name descname"><span class="pre">isascii_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#StringConvert.isascii_"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.StringConvert.isascii_" title="Link to this definition"></a></dt>
-<dd><p>Finding if string can be converted or is ascii.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Can be or is ascii.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.confirm">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#confirm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.confirm" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.get_bip39_passphrase">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">get_bip39_passphrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">confirm_required</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#get_bip39_passphrase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.get_bip39_passphrase" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.get_init_data">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">get_init_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">card</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cryptnoxpy.card</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">easy_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cryptnoxpro.command.helper.ui.InitData" title="cryptnoxpro.command.helper.ui.InitData"><span class="pre">InitData</span></a></span></span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#get_init_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.get_init_data" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.input_type">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">input_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_of_input=&lt;class</span> <span class="pre">'str'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#input_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.input_type" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.input_with_exit">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">input_with_exit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#input_with_exit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.input_with_exit" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.option_input">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">option_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#option_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.option_input" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.print_warning">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">print_warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#print_warning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.print_warning" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cryptnoxpro.command.helper.ui.secret_with_exit">
-<span class="sig-prename descclassname"><span class="pre">cryptnoxpro.command.helper.ui.</span></span><span class="sig-name descname"><span class="pre">secret_with_exit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpro/command/helper/ui.html#secret_with_exit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpro.command.helper.ui.secret_with_exit" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
+<section id="cryptnoxpro-command-helper-ui-module">
+<h2>cryptnoxpro.command.helper.ui module<a class="headerlink" href="#cryptnoxpro-command-helper-ui-module" title="Link to this heading"></a></h2>
 </section>
 <section id="module-cryptnoxpro.command.helper">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cryptnoxpro.command.helper" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">cryptnoxpro.command.helper</span></code> package provides utility functions and helper modules for command implementations.
+This package contains shared functionality used across multiple commands, including user interface components,
+security helpers, configuration management, and backup utilities.</p>
 </section>
 </section>
 
