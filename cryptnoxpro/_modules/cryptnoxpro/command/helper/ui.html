@@ -361,29 +361,24 @@
 
     <span class="n">warnings</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="c1"># Check for weak passphrases</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">passphrase</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">:</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Your passphrase is quite short. Consider using a longer passphrase.&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">passphrase</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Your passphrase contains only numbers. Consider adding letters or symbols.&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Check for common weak passphrases</span>
     <span class="n">weak_passphrases</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;password&quot;</span><span class="p">,</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span> <span class="s2">&quot;12345678&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;passphrase&quot;</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">passphrase</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">weak_passphrases</span><span class="p">:</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;WARNING: This is a commonly used passphrase and is not secure!&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Check for leading/trailing spaces</span>
     <span class="k">if</span> <span class="n">passphrase</span> <span class="o">!=</span> <span class="n">passphrase</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
         <span class="n">print_warning</span><span class="p">(</span><span class="s2">&quot;Your passphrase contains leading or trailing spaces. &quot;</span>
                       <span class="s2">&quot;Make sure you can remember this exactly!&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Check for multiple consecutive spaces</span>
     <span class="k">if</span> <span class="s2">&quot;  &quot;</span> <span class="ow">in</span> <span class="n">passphrase</span><span class="p">:</span>
         <span class="n">print_warning</span><span class="p">(</span><span class="s2">&quot;Your passphrase contains multiple consecutive spaces. &quot;</span>
                       <span class="s2">&quot;Make sure you can remember this exactly!&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Display general warnings</span>
     <span class="k">if</span> <span class="n">warnings</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">warning</span> <span class="ow">in</span> <span class="n">warnings</span><span class="p">:</span>
@@ -393,9 +388,7 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">confirm</span><span class="p">(</span><span class="s2">&quot;Do you want to continue with this passphrase?&quot;</span><span class="p">):</span>
             <span class="k">raise</span> <span class="n">ExitException</span><span class="p">(</span><span class="s2">&quot;User chose to re-enter passphrase&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Final confirmation</span>
     <span class="nb">print</span><span class="p">()</span>
-    <span class="n">print_warning</span><span class="p">(</span><span class="s2">&quot;FINAL CONFIRMATION&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please write down your passphrase and store it securely.&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Without this exact passphrase, you CANNOT access your wallet.&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
