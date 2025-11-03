@@ -77,7 +77,6 @@
 <span class="sd">connection</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Any</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">cryptography</span><span class="w"> </span><span class="kn">import</span> <span class="n">x509</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">.card</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
@@ -165,14 +164,6 @@
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
         <span class="n">certificate_parts</span> <span class="o">=</span> <span class="n">certificate</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;0302010202&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">certificate_parts</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">cert_bytes</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">certificate</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">cert_bytes</span><span class="p">:</span>
-                    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">cert_bytes</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
-                    <span class="n">pseudo_serial</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">digest</span><span class="p">[:</span><span class="mi">6</span><span class="p">],</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
-                    <span class="k">return</span> <span class="n">pseudo_serial</span><span class="p">,</span> <span class="n">certificate</span>
-            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-                <span class="k">pass</span>
             <span class="k">raise</span> <span class="n">CertificateException</span><span class="p">(</span><span class="s2">&quot;No card certificate found&quot;</span><span class="p">)</span>
 
         <span class="k">try</span><span class="p">:</span>
@@ -183,14 +174,6 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">CertificateException</span><span class="p">(</span><span class="s2">&quot;Bad certificate format&quot;</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">cert_bytes</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">certificate</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">cert_bytes</span><span class="p">:</span>
-                    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">cert_bytes</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
-                    <span class="n">pseudo_serial</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">digest</span><span class="p">[:</span><span class="mi">6</span><span class="p">],</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
-                    <span class="k">return</span> <span class="n">pseudo_serial</span><span class="p">,</span> <span class="n">certificate</span>
-            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-                <span class="k">pass</span>
             <span class="k">raise</span> <span class="n">CertificateException</span><span class="p">(</span><span class="s2">&quot;Bad card certificate format&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
 
         <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="n">certificate</span>
