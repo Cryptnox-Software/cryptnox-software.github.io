@@ -104,7 +104,7 @@
 <span class="sd">    Class containing functionality for Basic cards of the 1st generation</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">select_apdu</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA0</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x12</span><span class="p">]</span>
-    <span class="n">puk_rule</span> <span class="o">=</span> <span class="s2">&quot;12 digits and/or letters&quot;</span>
+    <span class="n">puk_rule</span> <span class="o">=</span> <span class="s2">&quot;12 ASCII characters&quot;</span>
 
     <span class="n">_ALGORITHM</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">SECP256R1</span>
     <span class="n">PUK_LENGTH</span> <span class="o">=</span> <span class="mi">12</span>
@@ -758,10 +758,10 @@
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">valid_puk</span><span class="p">(</span><span class="n">puk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">puk_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;puk&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">puk</span><span class="p">)</span> <span class="o">!=</span> <span class="n">BasicG1</span><span class="o">.</span><span class="n">PUK_LENGTH</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">DataValidationException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">puk_name</span><span class="si">}</span><span class="s2"> must have </span><span class="si">{</span><span class="n">BasicG1</span><span class="o">.</span><span class="n">PUK_LENGTH</span><span class="si">}</span><span class="s2"> letters or number &quot;</span>
-                                                     <span class="sa">f</span><span class="s2">&quot;characters&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">puk</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>
-            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">DataValidationException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">puk_name</span><span class="si">}</span><span class="s2"> must be letters and/or number characters.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">DataValidationException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">puk_name</span><span class="si">}</span><span class="s2"> must have </span><span class="si">{</span><span class="n">BasicG1</span><span class="o">.</span><span class="n">PUK_LENGTH</span><span class="si">}</span><span class="s2"> &quot;</span>
+                                                     <span class="sa">f</span><span class="s2">&quot;ASCII characters&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">128</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">puk</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">DataValidationException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">puk_name</span><span class="si">}</span><span class="s2"> must contain only ASCII characters.&quot;</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">puk</span></div>
 

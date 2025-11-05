@@ -234,15 +234,9 @@
 
 <span class="sd">        :param str new_pin: The desired PIN code to be set for the card</span>
 <span class="sd">                            (4-9 digits).</span>
-
-<span class="sd">        :raises DataValidationException: The current pin is not matching the one on the card</span>
-<span class="sd">                                         or the provided new pin is not valid</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">new_pin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_pin</span><span class="p">(</span><span class="n">new_pin</span><span class="p">,</span> <span class="n">pin_name</span><span class="o">=</span><span class="s2">&quot;new pin&quot;</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_change_secret</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">new_pin</span><span class="p">)</span>
-        <span class="k">except</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">DataValidationException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">DataValidationException</span><span class="p">(</span><span class="s2">&quot;The current pin is not matching the one on the card&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_change_secret</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">new_pin</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">auth_type</span> <span class="o">=</span> <span class="n">AuthType</span><span class="o">.</span><span class="n">PIN</span></div>
 
@@ -258,9 +252,6 @@
 
 <span class="sd">        :param str current_puk: The current PUK code of the card</span>
 <span class="sd">        :param str new_puk: The desired PUK code to be set for the card</span>
-
-<span class="sd">        :raises DataValidationException: The current puk is not matching the one on the card</span>
-<span class="sd">                                         or the provided puk value is not valid</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">current_puk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_puk</span><span class="p">(</span><span class="n">current_puk</span><span class="p">,</span> <span class="s2">&quot;current puk&quot;</span><span class="p">)</span>
         <span class="n">new_puk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_puk</span><span class="p">(</span><span class="n">new_puk</span><span class="p">,</span> <span class="s2">&quot;new puk&quot;</span><span class="p">)</span>
@@ -1021,13 +1012,13 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check if provided puk is valid</span>
 
-<span class="sd">        :param str puk: The puk to check if valid</span>
+<span class="sd">        :param str puk: The puk to check if valid (accepts all ASCII characters)</span>
 <span class="sd">        :param puk_name: Value used in DataValidationException for puk name. Defaults to: puk</span>
 <span class="sd">        :type puk_name: str, optional</span>
 
 <span class="sd">        :return str: Provided puk in str format if valid</span>
 
-<span class="sd">        :raise DataValidationException: Provided puk is not valid</span>
+<span class="sd">        :raise DataValidationException: Provided puk is not valid (wrong length or non-ASCII characters)</span>
 <span class="sd">        &quot;&quot;&quot;</span></div>
 
 
