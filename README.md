@@ -6,6 +6,7 @@
 <p align="center">Hosted on <strong>cryptnox-software.github.io</strong></p>
 <br/>
 
+[![Documentation](https://img.shields.io/badge/docs-Sphinx-blue)](https://cryptnox-software.github.io)
 [![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Cryptnox software documentation
