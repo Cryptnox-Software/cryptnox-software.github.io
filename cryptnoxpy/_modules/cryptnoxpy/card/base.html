@@ -234,9 +234,6 @@
 
 <span class="sd">        :param str new_pin: The desired PIN code to be set for the card</span>
 <span class="sd">                            (4-9 digits).</span>
-
-<span class="sd">        :raises DataValidationException: The current pin is not matching the one on the card</span>
-<span class="sd">                                         or the provided new pin is not valid</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">new_pin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_pin</span><span class="p">(</span><span class="n">new_pin</span><span class="p">,</span> <span class="n">pin_name</span><span class="o">=</span><span class="s2">&quot;new pin&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_change_secret</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">new_pin</span><span class="p">)</span>
