@@ -331,6 +331,10 @@ For it to work the card first must be opened with the current pin code.</p>
 <dd class="field-even"><p><strong>new_pin</strong> (<em>str</em>) – The desired PIN code to be set for the card
 (4-9 digits).</p>
 </dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – The current pin is not matching the one on the card
+or the provided new pin is not valid</p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -346,6 +350,10 @@ For it to work the card first must be opened with the current pin code.</p>
 <li><p><strong>current_puk</strong> (<em>str</em>) – The current PUK code of the card</p></li>
 <li><p><strong>new_puk</strong> (<em>str</em>) – The desired PUK code to be set for the card</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – The current puk is not matching the one on the card
+or the provided puk value is not valid</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1200,7 +1208,7 @@ PIN code</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid (accepts all ASCII characters)</p></li>
+<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid</p></li>
 <li><p><strong>puk_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Value used in DataValidationException for puk name. Defaults to: puk</p></li>
 </ul>
 </dd>
@@ -1208,7 +1216,7 @@ PIN code</p>
 <dd class="field-even"><p>Provided puk in str format if valid</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid (wrong length or non-ASCII characters)</p>
+<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1252,17 +1260,12 @@ it can be used again</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cryptnoxpy.card.basic_g1.BasicG1.puk_rule">
-<span class="sig-name descname"><span class="pre">puk_rule</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'12</span> <span class="pre">ASCII</span> <span class="pre">characters'</span></em><a class="headerlink" href="#cryptnoxpy.card.basic_g1.BasicG1.puk_rule" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">puk_rule</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'12</span> <span class="pre">digits</span> <span class="pre">and/or</span> <span class="pre">letters'</span></em><a class="headerlink" href="#cryptnoxpy.card.basic_g1.BasicG1.puk_rule" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cryptnoxpy.card.basic_g1.BasicG1.PUK_LENGTH">
 <span class="sig-name descname"><span class="pre">PUK_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#cryptnoxpy.card.basic_g1.BasicG1.PUK_LENGTH" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cryptnoxpy.card.basic_g1.BasicG1.MAX_ASCII_LENGTH">
-<span class="sig-name descname"><span class="pre">MAX_ASCII_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">128</span></em><a class="headerlink" href="#cryptnoxpy.card.basic_g1.BasicG1.MAX_ASCII_LENGTH" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1932,7 +1935,7 @@ might take longer. Defaults to False</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid (accepts all ASCII characters)</p></li>
+<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid</p></li>
 <li><p><strong>puk_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Value used in DataValidationException for puk name. Defaults to: puk</p></li>
 </ul>
 </dd>
@@ -1940,7 +1943,7 @@ might take longer. Defaults to False</p></li>
 <dd class="field-even"><p>Provided puk in str format if valid</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid (wrong length or non-ASCII characters)</p>
+<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2536,6 +2539,10 @@ For it to work the card first must be opened with the current pin code.</p>
 <dd class="field-even"><p><strong>new_pin</strong> (<em>str</em>) – The desired PIN code to be set for the card
 (4-9 digits).</p>
 </dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – The current pin is not matching the one on the card
+or the provided new pin is not valid</p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2551,6 +2558,10 @@ For it to work the card first must be opened with the current pin code.</p>
 <li><p><strong>current_puk</strong> (<em>str</em>) – The current PUK code of the card</p></li>
 <li><p><strong>new_puk</strong> (<em>str</em>) – The desired PUK code to be set for the card</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – The current puk is not matching the one on the card
+or the provided puk value is not valid</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3451,7 +3462,7 @@ PIN code</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid (accepts all ASCII characters)</p></li>
+<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid</p></li>
 <li><p><strong>puk_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Value used in DataValidationException for puk name. Defaults to: puk</p></li>
 </ul>
 </dd>
@@ -3459,7 +3470,7 @@ PIN code</p>
 <dd class="field-even"><p>Provided puk in str format if valid</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid (wrong length or non-ASCII characters)</p>
+<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3507,11 +3518,6 @@ it can be used again</p></li>
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptnoxpy.card.</span></span><span class="sig-name descname"><span class="pre">BasicG1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnoxpy/card/basic_g1.html#BasicG1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnoxpy.card.BasicG1" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#cryptnoxpy.card.base.Base" title="cryptnoxpy.card.base.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></a></p>
 <p>Class containing functionality for Basic cards of the 1st generation</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cryptnoxpy.card.BasicG1.MAX_ASCII_LENGTH">
-<span class="sig-name descname"><span class="pre">MAX_ASCII_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">128</span></em><a class="headerlink" href="#cryptnoxpy.card.BasicG1.MAX_ASCII_LENGTH" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cryptnoxpy.card.BasicG1.PUK_LENGTH">
 <span class="sig-name descname"><span class="pre">PUK_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#cryptnoxpy.card.BasicG1.PUK_LENGTH" title="Link to this definition"></a></dt>
@@ -3898,7 +3904,7 @@ challenge-response validation</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cryptnoxpy.card.BasicG1.puk_rule">
-<span class="sig-name descname"><span class="pre">puk_rule</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'12</span> <span class="pre">ASCII</span> <span class="pre">characters'</span></em><a class="headerlink" href="#cryptnoxpy.card.BasicG1.puk_rule" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">puk_rule</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'12</span> <span class="pre">digits</span> <span class="pre">and/or</span> <span class="pre">letters'</span></em><a class="headerlink" href="#cryptnoxpy.card.BasicG1.puk_rule" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -4243,7 +4249,7 @@ PIN code</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid (accepts all ASCII characters)</p></li>
+<li><p><strong>puk</strong> (<em>str</em>) – The puk to check if valid</p></li>
 <li><p><strong>puk_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Value used in DataValidationException for puk name. Defaults to: puk</p></li>
 </ul>
 </dd>
@@ -4251,7 +4257,7 @@ PIN code</p>
 <dd class="field-even"><p>Provided puk in str format if valid</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid (wrong length or non-ASCII characters)</p>
+<dd class="field-odd"><p><a class="reference internal" href="cryptnoxpy.html#cryptnoxpy.exceptions.DataValidationException" title="cryptnoxpy.exceptions.DataValidationException"><strong>DataValidationException</strong></a> – Provided puk is not valid</p>
 </dd>
 </dl>
 </dd></dl>
