@@ -234,13 +234,9 @@
 
 <span class="sd">        :param str new_pin: The desired PIN code to be set for the card</span>
 <span class="sd">                            (4-9 digits).</span>
-<span class="sd">        :raises PinException: The current pin is not matching the one on the card</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">new_pin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_pin</span><span class="p">(</span><span class="n">new_pin</span><span class="p">,</span> <span class="n">pin_name</span><span class="o">=</span><span class="s2">&quot;new pin&quot;</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_change_secret</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">new_pin</span><span class="p">)</span>
-        <span class="k">except</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">PinException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">PinException</span><span class="p">(</span><span class="s2">&quot;The current pin is not matching the one on the card&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_change_secret</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">new_pin</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">auth_type</span> <span class="o">=</span> <span class="n">AuthType</span><span class="o">.</span><span class="n">PIN</span></div>
 
@@ -256,15 +252,10 @@
 
 <span class="sd">        :param str current_puk: The current PUK code of the card</span>
 <span class="sd">        :param str new_puk: The desired PUK code to be set for the card</span>
-
-<span class="sd">        :raises PukException: The current puk is not matching the one on the card</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">current_puk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_puk</span><span class="p">(</span><span class="n">current_puk</span><span class="p">,</span> <span class="s2">&quot;current puk&quot;</span><span class="p">)</span>
         <span class="n">new_puk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_puk</span><span class="p">(</span><span class="n">new_puk</span><span class="p">,</span> <span class="s2">&quot;new puk&quot;</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_change_secret</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">new_puk</span> <span class="o">+</span> <span class="n">current_puk</span><span class="p">)</span>
-        <span class="k">except</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">PukException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">PukException</span><span class="p">(</span><span class="s2">&quot;The current puk is not matching the one on the card&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_change_secret</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">new_puk</span> <span class="o">+</span> <span class="n">current_puk</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">auth_type</span> <span class="o">=</span> <span class="n">AuthType</span><span class="o">.</span><span class="n">PIN</span></div>
 
