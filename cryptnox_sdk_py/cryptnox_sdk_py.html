@@ -749,6 +749,14 @@ values.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="cryptnox_sdk_py.connection.Connection.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/cryptnox_sdk_py/connection.html#Connection.disconnect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnox_sdk_py.connection.Connection.disconnect" title="Link to this definition"></a></dt>
+<dd><p>Disconnect from the card reader and clean up the connection.</p>
+<p>This method properly closes the connection to the card reader without
+deleting the Connection object itself.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="cryptnox_sdk_py.connection.Connection.send_apdu">
 <span class="sig-name descname"><span class="pre">send_apdu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apdu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/cryptnox_sdk_py/connection.html#Connection.send_apdu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnox_sdk_py.connection.Connection.send_apdu" title="Link to this definition"></a></dt>
 <dd><p>Send data to the card in plain format</p>
@@ -1467,6 +1475,14 @@ codes.</p>
 <dt class="sig sig-object py" id="cryptnox_sdk_py.Connection.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cryptnox_sdk_py/connection.html#Connection.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnox_sdk_py.Connection.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cryptnox_sdk_py.Connection.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/cryptnox_sdk_py/connection.html#Connection.disconnect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cryptnox_sdk_py.Connection.disconnect" title="Link to this definition"></a></dt>
+<dd><p>Disconnect from the card reader and clean up the connection.</p>
+<p>This method properly closes the connection to the card reader without
+deleting the Connection object itself.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cryptnox_sdk_py.Connection.remote_read">
