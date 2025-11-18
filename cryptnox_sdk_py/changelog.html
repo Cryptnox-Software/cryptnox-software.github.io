@@ -76,28 +76,46 @@
 <section id="id1">
 <h2>Changelog<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <section id="id3">
-<h3><a class="reference external" href="https://github.com/Cryptnox-Software/cryptnox_sdk_py/compare/v1.0.0...v1.0.1">1.0.1</a><a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
-<section id="changed">
-<h4>Changed<a class="headerlink" href="#changed" title="Link to this heading"></a></h4>
+<h3><a class="reference external" href="https://github.com/Cryptnox-Software/cryptnox_sdk_py/compare/v2.5.5...v1.0.1">1.0.1</a><a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>### Changes</p>
 <ul class="simple">
-<li><p>Package renamed from <code class="docutils literal notranslate"><span class="pre">cryptnoxpy</span></code> to <code class="docutils literal notranslate"><span class="pre">cryptnox_sdk_py</span></code></p></li>
+<li><p>Package renamed from <code class="docutils literal notranslate"><span class="pre">cryptnoxpy</span></code> to <code class="docutils literal notranslate"><span class="pre">cryptnox_sdk_py</span></code>
+- All imports must be updated from <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cryptnoxpy</span></code> to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cryptnox_sdk_py</span></code>
+- Install using: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cryptnox-sdk-py</span></code></p></li>
+<li><p>Updated README.md with new package name and improved examples</p></li>
+<li><p>Updated valid PUK validation logic</p></li>
+<li><p>Updated GitHub Actions workflows for documentation and CI/CD</p></li>
+<li><p>Modified setup configuration (setup.cfg) for better package management</p></li>
 </ul>
-</section>
+<p>### Added</p>
+<ul class="simple">
+<li><p>Added flake8 code quality checks to CI/CD workflow</p></li>
+<li><p>Added Sphinx documentation framework</p></li>
+<li><p>Implemented <code class="docutils literal notranslate"><span class="pre">disconnect()</span></code> method for Connection class to properly close connections</p></li>
+<li><p>Added comprehensive exception handling improvements</p></li>
+</ul>
+<p>### Fixed</p>
+<ul class="simple">
+<li><p>Fixed card not recognized error</p></li>
+<li><p>Resolved PUK retries persistence issue</p></li>
+<li><p>Fixed flake8 code style errors throughout the codebase</p></li>
+</ul>
+<p>### Removed</p>
+<ul class="simple">
+<li><p>Removed basic G0 cards references (no longer supported)</p></li>
+<li><p>Removed factory hashlib codes</p></li>
+</ul>
 </section>
 <section id="id5">
 <h3><a class="reference external" href="https://github.com/Cryptnox-Software/cryptnox-sdk-py/releases/tag/v2.5.5">2.5.5</a> - 2025-09-29<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
-<section id="id6">
-<h4>Changed<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<p>### Changed</p>
 <ul class="simple">
 <li><p>Handled get public key clear with different public key formats</p></li>
 </ul>
-</section>
-<section id="fixed">
-<h4>Fixed<a class="headerlink" href="#fixed" title="Link to this heading"></a></h4>
+<p>### Fixed</p>
 <ul class="simple">
 <li><p>Resolved card detection by implementing x509 parsing</p></li>
 </ul>
-</section>
 </section>
 </section>
 </section>
